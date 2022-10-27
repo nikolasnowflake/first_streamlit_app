@@ -22,3 +22,8 @@ streamlit.header("Fruityvice Fruit Advice!")
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvice_response.json())
+
+# pretvara podatke is json u regular 
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+# stavlja podatke u data frame.
+streamlit.dataframe(fruityvice_normalized)
