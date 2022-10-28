@@ -1,3 +1,2 @@
 # requirements.txt
-pip
-snowflake-connector-paython
+snowflake-connector-python
